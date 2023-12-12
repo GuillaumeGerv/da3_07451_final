@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace da3_07451_final.GUI
 {
-    public partial class FilmsActeursMenu : Form
+    internal partial class FilmsActeursMenu : Form
     {
         private App parentApp;
         private FilmsDTO? filmselected;
