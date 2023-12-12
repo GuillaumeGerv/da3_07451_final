@@ -24,7 +24,14 @@ namespace da3_07451_final.DataAccess.DAOs
         }
         public List<FilmsDTO> GetAll()
         {
-            return this.Context.Films.Include(film => film.ActeursDTO).ToList();
+            if (this.Context != null)
+            {
+                return this.Context.Films.Include(film => film.ActeursDTO).ToList();
+            }
+            else
+            {
+                return new List<FilmsDTO>();
+            }
         }
         public FilmsDTO Create(FilmsDTO film)
         {
